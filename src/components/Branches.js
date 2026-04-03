@@ -24,7 +24,6 @@ const Branches = () => {
       <div className="branches-grid">
         {branches.map((city, i) => (
           <div key={i} className="branch-card">
-            <span className="branch-num">0{i + 1}</span>
             <span className="branch-city">{city}</span>
           </div>
         ))}

@@ -7,7 +7,7 @@ import m14 from '../assets/images/menu5.jpg';
 import m15 from '../assets/images/menu6.jpg';
 import m16 from '../assets/images/menu7.jpg';
 import '../App.css';
-
+ 
 const days = [
   {
     day: 'ორშაბათი',
@@ -87,11 +87,11 @@ const days = [
     ]
   },
 ];
-
+ 
 const Menu = () => {
   const [activeDay, setActiveDay] = useState(0);
   const current = days[activeDay];
-
+ 
   return (
     <section className="menu" id="menu">
       <div className="menu-header">
@@ -99,7 +99,7 @@ const Menu = () => {
         <h2 className="section-title">Premium Selection</h2>
         <div className="section-divider"></div>
       </div>
-
+ 
       <div className="menu-days">
         {days.map((d, i) => (
           <button
@@ -111,24 +111,15 @@ const Menu = () => {
           </button>
         ))}
       </div>
-
+ 
       <div className="menu-content">
         <div className="menu-img">
           <img src={current.img} alt={current.day} />
           <div className="menu-day-badge">{current.day}</div>
         </div>
-
-        <div className="menu-items">
-          {current.items.map((item, i) => (
-            <div key={i} className="menu-item">
-              <span className="menu-time">{item.time}</span>
-              <span className="menu-dish">{item.dish}</span>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );
 };
-
+ 
 export default Menu;
